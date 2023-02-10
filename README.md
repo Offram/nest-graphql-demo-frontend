@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng g environments
 ng add @angular-eslint/schematics
 npm run lint
+ng g m TreeDemo --routing | ng g c TreeDemo -m tree-demo
