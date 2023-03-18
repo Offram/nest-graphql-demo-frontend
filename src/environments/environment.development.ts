@@ -1,3 +1,5 @@
+import { version } from '../../package.json';
+
 export const environment = {
     toastError: {
         nzPlacement: 'bottomRight',
@@ -9,4 +11,5 @@ export const environment = {
         nzDuration: 6000,
         nzPauseOnHover: true,
     },
+    version: version
 };
