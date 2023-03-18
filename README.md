@@ -30,3 +30,8 @@ ng g environments
 ng add @angular-eslint/schematics
 npm run lint
 ng g m TreeDemo --routing | ng g c TreeDemo -m tree-demo
+
+## Package Version print
+- npm install --save @types/node
+Add this to compilerOptions in tsconfig.json and tsconfig.app.json
+"types": ["node"]

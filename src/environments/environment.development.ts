@@ -1,5 +1,3 @@
-import { version } from '../../package.json';
-
 export const environment = {
     toastError: {
         nzPlacement: 'bottomRight',
@@ -11,5 +9,6 @@ export const environment = {
         nzDuration: 6000,
         nzPauseOnHover: true,
     },
-    version: version
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    version: require('../../package.json').version,
 };
