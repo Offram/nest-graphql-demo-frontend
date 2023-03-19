@@ -1,4 +1,6 @@
 export const environment = {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    appName: require('../../package.json').name,
     toastError: {
         nzPlacement: 'bottomRight',
         nzDuration: 6000,
