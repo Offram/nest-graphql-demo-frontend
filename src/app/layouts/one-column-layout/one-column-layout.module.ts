@@ -18,6 +18,9 @@ import { IconsProviderModule } from 'src/app/icons-provider.module';
     NzMenuModule,
     AppRoutingModule,
     IconsProviderModule,
+  ],
+  exports: [
+    OneColumnLayoutComponent
   ]
 })
 export class OneColumnLayoutModule { }
