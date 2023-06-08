@@ -1,4 +1,4 @@
-import { AsyncValidatorFn, FormControl, ValidatorFn } from "@angular/forms";
+import { AsyncValidatorFn, FormArray, FormControl, FormGroup, ValidatorFn } from "@angular/forms";
 
 export interface IMenu {
     routerLink?: string,
@@ -35,10 +35,14 @@ declare type ValidatorConfig = ValidatorFn | AsyncValidatorFn | ValidatorFn[] | 
 
 //TS Mapped Types, Conditional Types
 export type FormGroupTemplate<Type> = {
-    [Property in keyof Type]: FormControl<Type[Property] | null>;
+  [Property in keyof Type]: Type[Property] extends Array<infer U> ? FormArray<FormGroup<FormGroupTemplate<U>>> : FormControl<Type[Property] | null> ;
 };
 
+// type Unarray<T> = T extends Array<infer U> ? U : T;
+
 //TS Mapped Types, Conditional Types
+
 export type FormGroupBuilderTemplate<Type> = {
-    [Property in keyof Type]: (Type[Property] | ValidatorConfig | null)[];
+  // [Property in keyof Type]: (Type[Property] | ValidatorConfig | null)[] | FormArray<FormGroup<FormGroupTemplate2<Unarray<Type[Property]>>>>;
+  [Property in keyof Type]: Type[Property] extends Array<infer U> ? FormArray<FormGroup<FormGroupTemplate<U>>> : (Type[Property] | ValidatorConfig | null)[];
 };
