@@ -2,7 +2,7 @@ import { AfterViewInit, Directive } from "@angular/core";
 import { NzModalRef, NzModalService } from "ng-zorro-antd/modal";
 import { NzNotificationService } from "ng-zorro-antd/notification";
 import { environment } from "src/environments/environment.development";
-import { AppService } from "../app.service";
+import { AppService } from "../../app.service";
 import { DestroyTemplate } from "./destroy.template";
 
 
@@ -15,7 +15,7 @@ export abstract class BasicComponent extends DestroyTemplate implements AfterVie
     protected ref!: NzModalRef<unknown>;
 
     protected connection!: NzModalRef<unknown>;
-    
+
     constructor(
         protected readonly toast: NzNotificationService,
         protected readonly modal: NzModalService,

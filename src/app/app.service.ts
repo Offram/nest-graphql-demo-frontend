@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { DestroyTemplate } from './templates/destroy.template';
+import { DestroyTemplate } from './core/templates/destroy.template';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class AppService extends DestroyTemplate implements OnDestroy {
   }
 
   init() {
-    // 
+    //
   }
 
   override ngOnDestroy(): void {

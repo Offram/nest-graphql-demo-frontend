@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IMenu } from 'src/app/interfaces/interfaces';
+import { IMenu } from 'src/app/structures/interfaces/interfaces';
 import { MAIN_MENU } from 'src/app/menu';
-import { DestroyTemplate } from 'src/app/templates/destroy.template';
+import { DestroyTemplate } from 'src/app/core/templates/destroy.template';
 
 @Component({
   selector: 'app-one-column-layout',
