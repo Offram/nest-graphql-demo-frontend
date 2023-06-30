@@ -10,7 +10,8 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OneColumnLayoutModule } from './layouts/one-column-layout/one-column-layout.module';
+import { GraphQLModule } from './graphql.module';
+import { OneColumnLayoutModule } from './core/layouts/one-column-layout/one-column-layout.module';
 
 registerLocaleData(en);
 
@@ -25,6 +26,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     OneColumnLayoutModule,
+    GraphQLModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

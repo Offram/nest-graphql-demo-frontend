@@ -1,0 +1,25 @@
+<div *ngIf="errors">
+  <p> Error: {{ errors }}</p>
+</div>
+
+<div class="owners-container" *ngIf="owners">
+  Owners
+  <ul>
+    <li *ngFor="let owner of owners">
+      <div>
+        <span> {{owner | json}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="owners-container" *ngIf="owners">
+  Pets
+  <ul>
+    <li *ngFor="let owner of owners">
+      <div>
+        <span> {{owner | json}}</span>
+      </div>
+    </li>
+  </ul>
+</div>

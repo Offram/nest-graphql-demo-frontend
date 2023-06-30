@@ -1,4 +1,4 @@
-import { FormControl } from "@angular/forms";
+import { AsyncValidatorFn, FormControl, ValidatorFn } from "@angular/forms";
 
 export interface IMenu {
     routerLink?: string,
@@ -28,9 +28,17 @@ export interface IUserTypeForm {
 //     userType3: FormControl<boolean | null>,
 // }
 
+// export type IUserTypeFormGroup = FormGroupTemplate<IUserTypeForm>;
+
+
+declare type ValidatorConfig = ValidatorFn | AsyncValidatorFn | ValidatorFn[] | AsyncValidatorFn[];
+
 //TS Mapped Types, Conditional Types
-type FormGroupTemplate<Type> = {
+export type FormGroupTemplate<Type> = {
     [Property in keyof Type]: FormControl<Type[Property] | null>;
 };
 
-export type IUserTypeFormGroup = FormGroupTemplate<IUserTypeForm>
+//TS Mapped Types, Conditional Types
+export type FormGroupBuilderTemplate<Type> = {
+    [Property in keyof Type]: (Type[Property] | ValidatorConfig | null)[];
+};

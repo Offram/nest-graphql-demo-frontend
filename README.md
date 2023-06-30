@@ -26,12 +26,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+
+# Used Commands
+```
 ng g environments
 ng add @angular-eslint/schematics
 npm run lint
 ng g m TreeDemo --routing | ng g c TreeDemo -m tree-demo
+```
 
 ## Package Version print
-- npm install --save @types/node
+```
+npm install --save @types/node
+```
 Add this to compilerOptions in tsconfig.json and tsconfig.app.json
 "types": ["node"]
+
+
+## Add Apollo
