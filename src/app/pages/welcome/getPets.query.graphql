@@ -1,0 +1,9 @@
+query Pets {
+  pets {
+    id
+    name
+    owner {
+      name
+    }
+  }
+}

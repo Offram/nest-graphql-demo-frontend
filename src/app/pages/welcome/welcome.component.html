@@ -1,3 +1,16 @@
+<div class="roles-input-container">
+  <form [formGroup]="form">
+    <nz-radio-group formControlName="role">
+      <label nz-radio [nzValue]="Users.ALL_ALLOWED_USER">All Allowed</label>
+      <label nz-radio [nzValue]="Users.PARTIALLY_ALLOWED_USER">Partially Allowed</label>
+      <label nz-radio [nzValue]="Users.NONE_ALLOWED_USER">None Allowed</label>
+      <label nz-radio [nzValue]="Users.LOGOUT">Logout</label>
+    </nz-radio-group>
+  </form>
+</div>
+
+<!-- <button (click)="setComponentLoading()">Set loading</button> -->
+
 <div *ngIf="errors">
   <p> Error: {{ errors }}</p>
 </div>
@@ -13,12 +26,12 @@
   </ul>
 </div>
 
-<div class="owners-container" *ngIf="owners">
+<div class="owners-container" *ngIf="pets">
   Pets
   <ul>
-    <li *ngFor="let owner of owners">
+    <li *ngFor="let pet of pets">
       <div>
-        <span> {{owner | json}}</span>
+        <span> {{pet | json}}</span>
       </div>
     </li>
   </ul>

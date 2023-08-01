@@ -44,3 +44,10 @@ Add this to compilerOptions in tsconfig.json and tsconfig.app.json
 
 
 ## Add Apollo
+```
+ng add apollo-angular
+
+npm i @apollo/client apollo-angular graphql
+npm i -D typescript @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-apollo-angular @parcel/watcher
+
+```

@@ -1,0 +1,2 @@
+schema: http://[::1]:3000/graphql
+documents: "./src/**/*.graphql"
