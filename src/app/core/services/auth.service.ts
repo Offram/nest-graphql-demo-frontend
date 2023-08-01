@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MutationResult } from 'apollo-angular';
-import { lastValueFrom, tap } from 'rxjs';
-import { LoginGQL, LoginMutation } from 'src/generated-types';
+import { lastValueFrom } from 'rxjs';
+import { LoginGQL } from 'src/generated-types';
 
 @Injectable({
   providedIn: 'root'
