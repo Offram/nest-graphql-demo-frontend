@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCollapsed = false;
+
+  constructor(private readonly appService: AppService) {
+  }
+
+  get loading() {
+    return this.appService.loading;
+  }
 }

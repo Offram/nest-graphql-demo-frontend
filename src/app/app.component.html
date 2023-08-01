@@ -1,3 +1,5 @@
-<app-one-column-layout>
-  <router-outlet></router-outlet>
-</app-one-column-layout>
+<nz-spin nzTip="Loading..." [nzSpinning]="loading | async" nzSize="large">
+  <app-one-column-layout>
+    <router-outlet></router-outlet>
+  </app-one-column-layout>
+</nz-spin>

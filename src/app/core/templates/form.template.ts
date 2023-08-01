@@ -1,7 +1,7 @@
 import { Directive } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-import { FormGroupTemplate } from "../interfaces/interfaces";
 import { DestroyTemplate } from "./destroy.template";
+import { FormGroupTemplate } from "src/app/structures/interfaces/interfaces";
 
 @Directive()
 export abstract class FormTemplate<T> extends DestroyTemplate {

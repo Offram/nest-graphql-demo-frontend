@@ -1,4 +1,5 @@
 import { AsyncValidatorFn, FormControl, ValidatorFn } from "@angular/forms";
+import { Users } from "../enums/enums";
 
 export interface IMenu {
     routerLink?: string,
@@ -42,3 +43,9 @@ export type FormGroupTemplate<Type> = {
 export type FormGroupBuilderTemplate<Type> = {
     [Property in keyof Type]: (Type[Property] | ValidatorConfig | null)[];
 };
+
+
+
+export interface RoleForm {
+  role: Users,
+}
